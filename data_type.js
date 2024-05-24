@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <title> JavaScript Data Type </title>
- </head> 
-<body>
-
-
-
-    <script> // Javascript data type
-
 
      // non-primitive data type
      // "Object" represents instance though which we can access members
@@ -26,6 +15,4 @@
      var B=['Dhaka','Chittagong','Comilla']
      document.write(B);
      document.write(A.City);
-    </script>
-</body>
-</html>
+

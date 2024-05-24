@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <title> If-Else </title>
- </head> 
-<body>
 
-
-
-    <script> 
        var age=15;
        var city="Dhaka"
        if (age>=18 && city=="Dhaka")
@@ -22,8 +13,3 @@
        {
         document.write("Sorry, You are not eligible.")
        }
-       
-    
-    </script>
-</body>
-</html>

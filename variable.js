@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <title> JavaScript Variable </title>
- </head> 
-<body>
 
-
-
-    <script> 
-    
     // JavaScript Variables can be declared in 4 ways:
     // i)   Automatically
     // ii)  Using "var"
@@ -24,7 +14,3 @@
        m=y/n;
        document.write("Z ="+ z);
        document.write("m ="+ m);
-
-    </script>
-</body>
-</html>

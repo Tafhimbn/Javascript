@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <title> If-Else </title>
- </head> 
-<body>
 
-
-
-    <script> 
        var age=15;
        var city="Chittagong"
        switch(age)
@@ -22,6 +13,3 @@
                  document.write("Sorry, You are not eligible.")
         }
     
-    </script>
-</body>
-</html>

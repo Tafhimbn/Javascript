@@ -1,16 +1,4 @@
 
-
-<!DOCTYPE html>
-<html>
- <head>
-    <title> JavaScript Variable </title>
- </head> 
-<body>
-
-
-
-    <script> 
-    
         // Javascript Arithmetic Operator
 
         let a = 3;
@@ -29,9 +17,3 @@
         let r=10;
         r+= 5;
         document.write(r);
-
-        //
-        //
-    </script>
-</body>
-</html>

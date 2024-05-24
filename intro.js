@@ -7,10 +7,11 @@
             corrupti?   
         */
        
-       
-       
-       document.write("Javascript code using document.write()")       /* Write Javascript code using document.write() */
-       window.alert(" Write Javascript code using window.alert() ")  /* Using window.alert() */
-       console.log("Write Javascript code using console.log()")      /* Write Javascript code using console.log() */
 
+
+document.write("Javascript code using document.write()")       /* Write Javascript code using document.write() */
+window.alert(" Write Javascript code using window.alert() ")  /* Using window.alert() */
+       
+
+console.log("Write Javascript code using console.log()");      /* Write Javascript code using console.log(): print in console only*/
 

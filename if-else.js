@@ -1,9 +1,16 @@
 
 // Conditional statement
+// i) if
+// ii) else if 
+// iii) switch
+
+
+
+
 // if-else statement
 
-var age=15;
-var city="Dhaka"
+let age=15;
+let city="Dhaka"
 if (age>=18 && city=="Dhaka")
 {
    document.write("You are eligible .")

@@ -68,17 +68,17 @@ console.log(4 <= 4);               // true
 console.log(3 <= 2);               // false
 
 // JavaScript Logical Operators
-let _l = 2;
+let l = 2;
 
 // Logical AND Operator
-console.log((_l < 4) && (4 >= _l));    // true
-console.log((_l <= 4) && (2 == 4));   // false
-console.log((_l > 4) && (_l == 4));    // false
+console.log((l < 4) && (4 >= l));    // true
+console.log((l <= 4) && (2 == 4));   // false
+console.log((l > 4) && (l == 4));    // false
 
 // Logical OR Operator
-console.log((_l < 4) || (4 >= _l));     // true
-console.log((_l <= 4) || (2 == 4));    // true
-console.log((_l > 4) || (_l == 4));     // false
+console.log((l < 4) || (4 >= l));     // true
+console.log((l <= 4) || (2 == 4));    // true
+console.log((l > 4) || (l == 4));     // false
 
 // Logical NOT Operator
 console.log(!true);                   // false

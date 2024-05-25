@@ -1,8 +1,8 @@
 
 // JavaScript Variables can be declared in 4 ways:
 // i)   Automatically
-// ii)  Using "var"
-// iii) Using "let"
+// ii)  Using "var"  - can be declared and accessed globally
+// iii) Using "let" - can be declared globally, but its access is limited to the block in which it is declared
 //  iv) Using "const"
     
 // Variable names are case sensitive; “a” & “A” is different.

@@ -54,15 +54,22 @@ let str2 = "Hello";
 document.write(str2.slice(0,3),"<br>");
 
 // str1.concat(str2) // joins str2 with str1
-str3 = "Tafhim"
-str4 = "Bin Nasir"
+let str3 = "Tafhim"
+let str4 = " Bin Nasir"
 
-document.write(str3.concat(str4));
-
+document.write(str3.concat(str4),"<br>");
 
 // srt.replace(searchVal,newVal)
 
-// str.charAr(idx)
+let str5 = "Bad"
+document.write(str5.replace("a","e"),"<br>");
+
+// str.charAt(idx) -> to find index of any character
+let str6 = "Bangladesh"
+document.write(str6.charAt(5),"<br>");
+
+
+
 
 } // Avoid it; write code inside function to avoid global variable conflict
 string();

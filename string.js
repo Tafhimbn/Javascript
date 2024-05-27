@@ -26,6 +26,7 @@ let info={nam:"Tafhim",cgpa:4.00, pass:2020}
 document.write(`Hello ${info.nam} ! You are graduated in ${info.pass} with CGPA ${info.cgpa} out 4.00. <br>`)
 
 
+
 // String Interpolation  --> to create strings by doing substitution of placeholders
 //
 
@@ -69,6 +70,14 @@ let str6 = "Bangladesh"
 document.write(str6.charAt(5),"<br>");
 
 
+// array is immutable (data can't be changed)
+let str7="Fahim";
+str7.replace("Fahim","Tafhim");
+document.write(str7,"<br>");
+
+let marks={bangla:80,english:79, math:95}
+marks.bangla=0;
+document.write(`Bangla: ${marks.bangla} <br>`);
 
 
 } // Avoid it; write code inside function to avoid global variable conflict

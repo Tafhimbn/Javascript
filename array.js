@@ -1,4 +1,4 @@
-function string(){ // Avoid it; write code inside function to avoid global variable conflict
+function array(){ // Avoid it; write code inside function to avoid global variable conflict
 
 
 
@@ -21,7 +21,13 @@ function string(){ // Avoid it; write code inside function to avoid global varia
    }
    
     // array is mutable (data can be changed)
-
+    let std=["Fahim","Rakib","Sakib"]
+    std[0]="Tafhim";
+    document.write(std,"<br>");
+    
+    let speed=[45,86,56]
+    speed[1]=0;
+    document.write(`Speed of car 1: ${speed[1]} <br>`);
 
     // Add Element to an Array
     // 1. Using the push() Method
@@ -34,4 +40,4 @@ function string(){ // Avoid it; write code inside function to avoid global varia
 
 
 } // Avoid it; write code inside function to avoid global variable conflict
-string();
+array();

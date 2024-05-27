@@ -15,19 +15,32 @@ function array(){ // Avoid it; write code inside function to avoid global variab
    document.write("Lenght of marks array:",marks.length,"<br>");
   
    // Array Indices
-
-   for (i=0;i<marks.length;i++){
-    document.write(`marks ${i}: ${marks[i]}<br>`);
-   }
-   
-    // array is mutable (data can be changed)
-    let std=["Fahim","Rakib","Sakib"]
-    std[0]="Tafhim";
-    document.write(std,"<br>");
+        for (i=0;i<marks.length;i++){         // Looping over array
+            document.write(`marks ${i}: ${marks[i]}<br>`);
+        }
     
-    let speed=[45,86,56]
-    speed[1]=0;
-    document.write(`Speed of car 1: ${speed[1]} <br>`);
+    // array is mutable (data can be changed)
+        let std=["Fahim","Rakib","Sakib"]
+        std[0]="Tafhim";
+        document.write(std,"<br>");
+        
+        let speed=[45,86,56]
+        speed[1]=0;
+        document.write(`Speed of car 1: ${speed[1]} <br>`);
+    
+    
+    // Array method
+
+    // push(): and to end
+     let num =[1,2,3,4];
+     num.push(5);
+     document.write(num,"<br>");
+     let del_num = num.pop();
+     document.write(num,"<br>");
+     document.write(del_num,"<br>");
+
+    // Pop(): delete from end & return
+
 
     // Add Element to an Array
     // 1. Using the push() Method

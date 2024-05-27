@@ -46,7 +46,7 @@ console.log("Sum of Array =" + sum);
 
 let student_info={name:"Tafhim", age:25, cgpa:4.00,graduated:true};
 
-for (let sec in studrnt_info){
+for (let sec in student_info){
   document.write( "Section=", sec, "; Value= ", student_info[sec] ,"<br>");
 }
 

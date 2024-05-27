@@ -31,23 +31,57 @@ function array(){ // Avoid it; write code inside function to avoid global variab
     
     // Array method
 
-    // push(): and to end
+    // push() Method: and to end
      let num =[1,2,3,4];
      num.push(5);
      document.write(num,"<br>");
-     let del_num = num.pop();
-     document.write(num,"<br>");
-     document.write(del_num,"<br>");
 
-    // Pop(): delete from end & return
+    // pop() Method: delete from end & return
+        let del_num = num.pop();
+        document.write(num,"<br>");
+        document.write(del_num,"<br>");
 
+    // toString() Method: converts array to string
+        let num_a=[1,2,3,4];
+        document.write(typeof(num_a),"<br>");
+        let num_s=num_a.toString();
+        document.write(typeof(num_s),"<br>");
 
-    // Add Element to an Array
-    // 1. Using the push() Method
-    // 2. Using the unshift() Method
+    // concat() Method: joins multiple arrays returns result
+       let a1=[1,2,3,4];
+       let a2=[5,6,7,8];
+       let a3 = a1.concat(a2,"<br>");
+       document.write(a1,"<br>");
+       document.write(a3,"<br>");
+    // unshift() Method: add to start
+       let a4=[1,2,3];
+       a4.unshift(0);
+       document.write(a4,"<br>");
 
+    // shift() Method: delete from start
+        let a5=[1,2,3];
+        a5.shift();
+        document.write(a5,"<br>");
 
+    // slice() Method: returns a piece of the array
+    // slice(start index, end index)
 
+    let a6=[1,2,3,4];
+    let a7 =a6.slice(2,3);
+    document.write(a7,"<br>");
+    document.write(a6,"<br>");
+
+    // splice() Method:change original array(add, remove, replace)
+    // splice(start_index, del_count, new_element)
+
+    let a8=[1,2,3,4,5,6,7,8];
+    a8.splice(1,1);             // delete element
+    document.write(a8,"<br>");
+    a8.splice(3,0,9);
+    document.write(a8,"<br>"); // add element
+    a8.splice(5,1,99);
+    document.write(a8,"<br>");  // replace element
+   
 
 
 

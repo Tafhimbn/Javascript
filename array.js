@@ -103,5 +103,18 @@ number.map((val) =>{
     document.write(val,"<br>");
 });
 
+/* Reduce method
+    -> Performs some operations & reduces the array to a single value. It returns
+       that single value.
+
+  Syntax:
+  map((element, index, array) => {........... })
+*/
+const num_ar = [1, 4, 9, 16, 25];
+const squareRoots = num_ar.map(num => Math.sqrt(num));
+
+console.log(squareRoots); // Output: [1, 2, 3, 4, 5]
+
+
 } // Avoid it; write code inside function to avoid global variable conflict
 array();

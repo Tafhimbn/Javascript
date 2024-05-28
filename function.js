@@ -32,13 +32,15 @@ let val = multi(2,3); // () operator --> invokes (calls) the function
 
 
 document.write(val,"<br>");  
-// () operator --> invokes (calls) the function
 
 
-// Functions Used as Variable Values
+/* Variables can be declared in different scopes:
 
-// Local Variables -> Variables declared within a JavaScript function
+Global Scope
+Local (Function) Scope -> Variables declared within a JavaScript function
+Block-Level Scope
 
+*/
 
 
 function cal(x,y){
@@ -47,6 +49,7 @@ function cal(x,y){
  return sum;
 }
 cal(5,6);
+
 /*
 2.  Nested functions: 
         -> Functions within another function
@@ -102,21 +105,11 @@ N>B: n anonymous function is not accessible after its initial creation, it can o
 */
 
 
-
 var str = function () { 
   console.log("This is anonymous function"); 
 }; 
 
 str(); 
-
-
-
-
-
-
-
-
-
 
 
 // Arrow Function -> compact way of writing a function
@@ -168,6 +161,43 @@ Syntax:
   var localVar = 'This is a local variable.';
   document.write(localVar); // Output: This is a local variable
 })();
+
+
+/*
+ Function Recursion 
+    -> a function calls itself repeatedly to solve a problem
+*/
+// recursive function
+function counter(count) {
+  document.write(count,"<br>");    // display count
+  if(count > 1) {           // condition for stopping
+      count = count - 1;     // decrease count
+      counter(count);        // call counter with new value of count
+  } else {
+      return;                // terminate execution
+  };
+};
+
+counter(5); // call or invoke function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

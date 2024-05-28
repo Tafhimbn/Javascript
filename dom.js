@@ -8,4 +8,19 @@
 //         </body>
 
 
+/*   DOM -> Document Object Model
+-> when a web page is loaded, the browser creates a DOM of the page
+window -> document -> html -> head -> meta
+                           |       |-> meta
+                           |       |-> title
+                           |       |-> link
+                           |-> body -> div -> img
+                                    |      |-> h1
+                                    |      |-> p
+                                    |      |-> div 
+                                     -> script
+
+*/
+
+/* DOM Manipulation
 

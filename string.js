@@ -70,14 +70,10 @@ let str6 = "Bangladesh"
 document.write(str6.charAt(5),"<br>");
 
 
-// array is immutable (data can't be changed)
+// sting is immutable (data can't be changed)
 let str7="Fahim";
 str7.replace("Fahim","Tafhim");
 document.write(str7,"<br>");
-
-let marks={bangla:80,english:79, math:95}
-marks.bangla=0;
-document.write(`Bangla: ${marks.bangla} <br>`);
 
 
 } // Avoid it; write code inside function to avoid global variable conflict

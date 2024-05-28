@@ -81,10 +81,27 @@ function array(){ // Avoid it; write code inside function to avoid global variab
     document.write(a8,"<br>"); // add element
     a8.splice(5,1,99);
     document.write(a8,"<br>");  // replace element
-   
 
 
+    // forEach loop in Array
+    // syntax:
+    // arr.forEach(callBackFunction)
+  let name=["tafhim","fahim","tanzim"]
 
+  name.forEach((val, idx, name) => {
+    console.log(val.toUpperCase(),idx,name);
+});
+
+/* map method
+   -> Creates a new array with the results of some operation. The value its callback returns are
+      used to form new array
+syntax: array.map(callbackfunction(value,index,array))
+*/
+let number=[12,53,68];
+
+number.map((val) =>{
+    document.write(val,"<br>");
+});
 
 } // Avoid it; write code inside function to avoid global variable conflict
 array();

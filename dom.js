@@ -39,8 +39,8 @@ console.log(document.all); // print all elements of html page
 
 /*  Methods of Document Object Model
 
-1. write("string") -> writes the given string on the doucment.
-2. writeln("string") -> writes the given string on the doucment with newline character at the end.
+1. write("string") -> writes the given string on the document.
+2. writeln("string") -> writes the given string on the document with newline character at the end.
 3. getElementById() -> returns the element having the given id value.
 4. getElementsByName() -> returns all the elements having the given name value.
 5. getElementsByTagName() -> returns all the elements having the given tag name.

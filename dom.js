@@ -39,18 +39,26 @@ console.log(document.all); // print all elements of html page
 
 /*  Methods of Document Object Model
 
-1. write("string") -> writes the given string on the document.
-2. writeln("string") -> writes the given string on the document with newline character at the end.
-3. getElementById() -> returns the element having the given id value.
-4. getElementsByName() -> returns all the elements having the given name value.
-5. getElementsByTagName() -> returns all the elements having the given tag name.
-6. getElementsByClassName() -> returns all the elements having the given class name.
-
+1. write("string")                      -> writes the given string on the document.
+2. writeln("string")                    -> writes the given string on the document with newline character at the end.
+3. getElementById("ID")                 -> returns the element having the given id value.
+4. getElementsByName()                  -> returns all the elements having the given name value.
+5. getElementsByTagName("Tag")          -> returns all the elements having the given tag name.
+6. getElementsByClassName("class_name") -> returns all the elements having the given class name.
 */
 
 // getElementById()
 console.log(document.getElementById("str"));
 let txt = document.getElementById("str");
+
+/*
+Properties:
+    tagName : returns tag for element nodes
+    innerText : returns the text content of the element and all its children
+    innerHTML : returns the plain text or HTML contents in the element
+    textContent : returns textual content even for hidden elements
+
+*/
 
 txt.textContent = "change element by getElementById() method ";
 txt.innerText = "getElementById() method ";
@@ -84,6 +92,11 @@ console.log(tg);
 
 
 // Query Selector   --- use instead of Jquery 
+
+/* document.querySelector(“#myId / .myClass / tag”) //returns first element
+  document.querySelectorAll(“#myId / .myClass / tag”) //returns a NodeList
+*/
+
 let qs = document.querySelector('.cls');
 console.log(qs);
 
@@ -95,13 +108,20 @@ console.log(its);
 
 let it2 = document.querySelectorAll('.cls:nth-child(2)');
 console.log(it2);
-
+/*  
+  Style:
+    node.style 
+    node.style.color="color_name";
+    node.style.backgroundColor="color_name"; 
+    node.style.fontsize="100px"; 
+*/
 for (let i of its){
     i.style.color="pink";
 }
 
-// DOM Traversing
-/* Parent/child relation    */
+/* --------> DOM Traversing  <---------
+    Parent/child relation  
+*/
 
 const dada = document.querySelector('.grandfather');
 const baab = dada.children;
@@ -109,29 +129,45 @@ const baab = dada.children;
 const chele = dada.querySelectorAll('.child');
 console.log(chele);
 
-// reverse order
+/* reverse order */
 // const chele = document.querySelector('.child');
 // const baab = chele.parentElement;
 // console.log(baab);
 // const dada = chele.closest('.grandfather');
 // console.log(dada);
 
-// parallel  order
+/* parallel  order */
 // const chele_1 = document.querySelector('.child');
 // const chele_2 = chele_1.nextElementSibling;
 // const chele_3 = chele_2.nextElementSibling;
 // chele_2.style.color = "red";
 
-// DOM Manipulate 
+/* ----> DOM Manipulation <------
+
+  Attributes:
+    getAttribute( attr)            //  to get the attribute value
+    setAttribute( attr, value )    //  to set the attribute value
+*/
+
+let division = document.querySelector('div');
+console.log(division);
+
+let id = division.getAttribute('id');
+console.log(id);
+
 // creating and element
-
 const divElement = document.createElement('div'); // create element
-
 divElement.classname = 'red'; //creating class of this element
 
 divElement.setAttribute('id','red'); // adding attribute of this element
 divElement.setAttribute('title','Red div');
 
+
+/* Insert Elements
+    node.prepend( el )     //adds at the start of node (inside)
+    node.before( el )      //adds before the node (outside)
+    node.after( el )       //adds after the node (outside)
+*/
 // add element dynamically 
 const container = document.querySelector('.classA'); // use "." before class
 // const h2Element = container.querySelector('h2');  
@@ -140,4 +176,13 @@ const container = document.querySelector('.classA'); // use "." before class
 
 container.appendChild(divElement); // add only html element in last part of element
 // container.append(divElement); // add text/html element in last part of element
+
+
+/*
+Delete Element
+    node.remove( ) //removes the node
+
+*/
+
+
 

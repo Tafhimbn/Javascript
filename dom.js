@@ -87,8 +87,6 @@ console.log(tg);
 let qs = document.querySelector('.cls');
 console.log(qs);
 
-
-
 let it = document.querySelector('.cls:last-child');
 it.style.color = "yellow";
 
@@ -102,8 +100,27 @@ for (let i of its){
     i.style.color="pink";
 }
 
+// DOM Traversing
+/* Parent/child relation    */
 
-// Parent/child relation
+const dada = document.querySelector('.grandfather');
+const baab = dada.children;
+const baab = dada.children;
+const chele = baab[1].children;
+const chele = dada.querySelectorAll('.child');
+console.log(chele);
 
+// reverse order
+// const chele = document.querySelector('.child');
+// const baab = chele.parentElement;
+// console.log(baab);
+// const dada = chele.closest('.grandfather');
+// console.log(dada);
 
+// parallel  order
+// const chele_1 = document.querySelector('.child');
+// const chele_2 = chele_1.nextElementSibling;
+// const chele_3 = chele_2.nextElementSibling;
+// chele_2.style.color = "red";
 
+// DOM Manipulate 

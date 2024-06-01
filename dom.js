@@ -105,8 +105,7 @@ for (let i of its){
 
 const dada = document.querySelector('.grandfather');
 const baab = dada.children;
-const baab = dada.children;
-const chele = baab[1].children;
+//const chele = baab[1].children;
 const chele = dada.querySelectorAll('.child');
 console.log(chele);
 
@@ -124,3 +123,21 @@ console.log(chele);
 // chele_2.style.color = "red";
 
 // DOM Manipulate 
+// creating and element
+
+const divElement = document.createElement('div'); // create element
+
+divElement.classname = 'red'; //creating class of this element
+
+divElement.setAttribute('id','red'); // adding attribute of this element
+divElement.setAttribute('title','Red div');
+
+// add element dynamically 
+const container = document.querySelector('.classA'); // use "." before class
+// const h2Element = container.querySelector('h2');  
+// container.insertBefore(divElement,h2Element);   
+// "in_which_element".insertBefore("insert_element","before_which_element");
+
+container.appendChild(divElement); // add only html element in last part of element
+// container.append(divElement); // add text/html element in last part of element
+

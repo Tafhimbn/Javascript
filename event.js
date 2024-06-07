@@ -48,4 +48,8 @@ p1.onmouseover = () => {
     e.target, e.type, e.clientX, e.clientY
 
 */
+let btn2=document.querySelector("#btn2");
 
+btn2.onclick = (evt) => {
+    console.log(evt);
+};

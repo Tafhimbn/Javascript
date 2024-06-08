@@ -9,7 +9,7 @@
 
 */
 
-// Event Handling in JS
+// Event Handling in JS  
 /*
     node.event = ( ) => {
     //handle here
@@ -18,6 +18,8 @@
     btn.onclick = ( ) => {
     console.log(“btn was clicked”);
     }
+
+    drawback: HTML code will become bulky 
 */
 let btn1=document.querySelector("#btn1");
 
@@ -45,8 +47,9 @@ p1.onmouseover = () => {
     //handle here
     }
 
-    e.target, e.type, e.clientX, e.clientY
+    example: event_node.target,  event_node.type,  event_node.clientX,  event_node.clientY
 
+    drawback: only one function can be handle at time
 */
 let btn2=document.querySelector("#btn2");
 
@@ -56,3 +59,58 @@ btn2.onclick = (evt) => {
     console.log(evt.target);
     console.log(evt.clientX, evt.clientY);
 };
+
+
+// Event Listener
+/*
+
+node.addEventListener( event, callback )
+node.removeEventListener( event, callback )
+
+*Note : the callback reference should be same to remove;
+          here callback is event handler
+
+=> multiple event Listener can be created
+
+*/
+
+let btn3=document.querySelector("#btn3");
+
+btn3.addEventListener("click", () => {
+    console.log("Button3 was clicked")
+});
+
+
+let p2=document.querySelector(".p2");
+
+p2.addEventListener("mouseover",  mOver => {
+    mOver.target.style.backgroundColor= "green"; 
+    mOver.target.innerText="Thank You! 😊";   
+    console.log("Mouse over");
+});
+
+p2.addEventListener("mouseout",  mOut  => {
+    mOut.target.style.backgroundColor= "red"; 
+    mOut.target.innerText = "Mouse Over Me";
+    console.log("Mouse out");
+ });
+
+
+btn3.addEventListener("click", () => {
+    console.log("Button3 was clicked-handler 1")
+});
+
+const handler3 = () => {
+    console.log("Button3 was clicked-handler 2")
+};
+btn3.addEventListener("click",handler3 );
+
+
+btn3.addEventListener("click", () => {
+    console.log("Button3 was clicked-handler 3")
+});
+// will remove handler 2
+btn3.removeEventListener("click",handler3 );
+
+
+// for more: https://developer.mozilla.org/en-US/docs/Web/Events

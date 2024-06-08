@@ -28,10 +28,10 @@ btn1.onclick = () => {
     console.log(a); //26
 };
 
-let p1=document.querySelector("#p1");
+let p1=document.querySelector(".p1");
 
 p1.onmouseover = () => {
-    console.log("you are inside red rectangle.");
+    console.log("You are inside red rectangle.");
 };
 
 
@@ -52,4 +52,7 @@ let btn2=document.querySelector("#btn2");
 
 btn2.onclick = (evt) => {
     console.log(evt);
+    console.log(evt.type);
+    console.log(evt.target);
+    console.log(evt.clientX, evt.clientY);
 };

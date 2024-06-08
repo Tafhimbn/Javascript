@@ -14,14 +14,14 @@ immediately and doesn't block the flow.
 function hello(){
     console.log("Hello!")
 }
-setTimeout(hello,4000); //timeout
+setTimeout(hello,2000); //timeout
 
 // or
 console.log("one");
 console.log("two");
 setTimeout(() => {
     console.log("hello");
-},4000) //timeout
+},2000) //timeout
 
 console.log("three");
 console.log("four");
@@ -38,6 +38,7 @@ function calculator(a,b, sumCallback){
 }
 
 calculator(1,2,sum);
+
 /*
 Callback Hell
      => Callback Hell : Nested callbacks stacked below one another forming a pyramid structure.(Pyramid of Doom)
@@ -45,6 +46,25 @@ Callback Hell
      This style of programming becomes difficult to understand & manage.
 */
 
+function getData(dataId, getNextData){
+    //2s
+    setTimeout( () => {
+        if (getNextData){
+            getNextData();
+        }
+    }, 3000);
+}
+
+getData(1, () => {                       // callback hell
+    console.log("getting data2..");
+    getData(2, () => {
+       console.log("getting data3....");
+       getData(3,() => {
+            console.log("getting data4......");
+            getData(4);
+        });
+    });
+});
 
 
 /*
@@ -67,11 +87,42 @@ A JavaScript Promise object can be:
 
     .then( ) & .catch( )
 
-    promise.then( ( res ) => { .... } )
-    promise.catch( ( err ) ) => { .... } )
+    promise.then( ( res ) => { .... } )                // when promise fullfil
+    promise.catch( ( err ) ) => { .... } )             // when promise rejected
 
 */
 
+let promise = new Promise ((resolve, reject) => {
+    console.log("I am promise");
+});
+
+function asyncFunc1() {
+    return new Promise ((resolve, reject) => {
+       setTimeout(() => {
+        console.log("data1");
+        resolve("success");
+       }, 4000);
+    });
+}
+function asyncFunc2() {
+    return new Promise ((resolve, reject) => {
+       setTimeout(() => {
+        console.log("data1");
+        resolve("success");
+       }, 4000);
+    });
+}
+
+console.log("fetching data1.....");
+let pro1 = asyncFunc1();
+pro1.then((res) => {
+    console.log(res);
+    console.log("fetching data2.....");
+    let pro2 = asyncFunc2();
+    pro2.then((res) => {
+        console.log(res);
+    });
+});
 
 
 

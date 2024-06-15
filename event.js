@@ -30,7 +30,7 @@ btn1.onclick = () => {
     console.log(a); //26
 };
 
-let p1=document.querySelector(".p1");
+let p1=document.querySelector('.p1');
 
 p1.onmouseover = () => {
     console.log("You are inside red rectangle.");
@@ -81,7 +81,7 @@ btn3.addEventListener("click", () => {
 });
 
 
-let p2=document.querySelector(".p2");
+let p2=document.querySelector('.p2');
 
 p2.addEventListener("mouseover",  mOver => {
     mOver.target.style.backgroundColor= "green"; 

@@ -99,18 +99,18 @@
     </div>
 
     <script src="dom.js"></script> 
-    
+
     <!--               Javascript Event             -->
     <h3> Javascript Event: </h3>
   
     <!-- without event -->
     <button onclick="console.log('button was clicked')"> Click Here </button>
     <button ondblclick="console.log('button was double clicked')"> Double Click Here </button>
-    <p onmouseover="console.log('You are in red Rectangle.')"> Mouse over box</p>
+    <p class="p0" onmouseover="console.log('You are in red Rectangle.')"> Mouse over box</p>
     
     <!-- without event -->
     <button id="btn1"> Click Here </button>
-    <p class="p1"> Mouse over box</p>
+    <p class="p1"> Mouse over box</p> 
     
     <!-- onmouseover="console.log('You are in red Rectangle.')"   -->
     <button id="btn2"> Click Here </button>
@@ -126,7 +126,34 @@
     <script  src="class.js"></script> 
     <!--    Asynchronous    -->
     <script  src="async.js"></script> 
+  
+  <!--    ------ API --------    -->
+    <!--    Browser API    -->
+    <h2>JavaScript Validation</h2>
 
+    <!-- inRange Property validation -->
+    <p>Enter a number and click OK:</p>
+    <input id="id_api0" type="number" min="100" max="300" required/>
+    <button onclick="validation_inRange()"> Check Validity</button> 
+    <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+    <p id="browserAPI0"></p>
+
+    <!-- rangeOverflow Property validation -->
+    <p>Enter a number and click OK:</p>
+    <input id="id_api1" type="number" max="300" required/>
+    <button onclick="validation_rangeOverflow()"> Check Validity</button> 
+    <p>If the number is greater than 300, an error message will be displayed.</p>
+    <p id="browserAPI1"></p>
+
+    <!-- rangeUnderflow Property validation -->
+    <p>Enter a number and click OK:</p>
+    <input id="id_api2" type="number" min="100" required/>
+    <button onclick="validation_rangeUnderflow()"> Check Validity</button> 
+    <p>If the number is less than 100, an error message will be displayed.</p>
+    <p id="browserAPI2"></p>
+
+    <script  src="browserAPI.js"></script> 
+    
     <!--    Fetch API    -->
     <script  src="fetchAPI.js"></script> 
 

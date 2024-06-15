@@ -4,7 +4,7 @@
     It uses Request and Resource objects.
     The fetch() method is used to fetch a resource (data).
 
-let promise = fetch(url.[option])
+let promise = fetch(url.[option]) 
 
 */
 
@@ -18,7 +18,7 @@ const getFacts = async () => {
   console.log("Getting data ......");
   let response = await fetch(URL);
   console.log(response);
-  console.log(response.);
+  console.log(response);
 };
 
 
@@ -51,3 +51,4 @@ JSON:
         Square brackets hold arrays
 
 */
+ 

@@ -17,20 +17,37 @@
    value −> It is a value in the string format.
 */
 
+// Function to save input value to localStorage
 function setItem() {
-    const input_name = document.getElementById('p_name');
-    console.log(input_name);
-    const input_price = document.getElementById('p_price');
-
+    const input_name = document.getElementById('p_name').value;
+    const input_price = document.getElementById('p_price').value;
+    
     const product = {
         name: input_name,
         price: input_price,
     }
     localStorage.setItem("product", JSON.stringify(product));
   }
+
+// Function to load input value from localStorage
+
 const output = document.getElementById("storageAPI0");
 
 function getItem(){
     const product = localStorage.getItem("product");
-    output.innerHTML = "The Product is:"+ product;
+    
+    if (product !== null) {
+       
+      const product_out = JSON.parse(product);
+        /*
+          The JSON.parse() method in JavaScript is used to parse a JSON string which is written in a JSON format and returns a JavaScript object. 
+              Syntax:
+                      JSON.parse( string, function )
+        */
+      const output = document.getElementById('storageAPI0');
+      output.innerHTML = `Product: ${product_out.name}, Price: ${product_out.price} BDT`;
+
+    } else {
+      output.innerHTML = 'No value saved in localStorage';
+    }
 }

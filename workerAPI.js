@@ -7,15 +7,36 @@ It increases the response time of the web page.
 
 */
 
-let w = 0;
+let w ;
 
 function startWorker() {
-    if(typeof(w) === "undefined") {
-        // if w worker is not define , create worker
-        w = new Worker("demo ");    
-    } else if (typeof(w) !== "undefined") {
+
+    if(typeof(Worker) !== "undefined") {   // Check Web Worker Support
+        // check worker available or not
+         
+        // if w worker is not already defined; Create a Web Worker Object
+     if (typeof(w) == "undefined") {
+        // create a new worker called 'w'
+         w = new Worker("worker_demo.js");  
+     }
       
+     // listening for worker events/messages
+     w.onmessage = function (event){
+        console.log(event.data);
+        document.getElementById("worker_data").innerHTML = event.data;
+     };
     } else {
             alert("Sorry, Your browser dose not support web worker!");
         }
+}
+
+
+function stopWorker(){   // Terminate a Web Worker
+    if(typeof(Worker) !== "undefined") { 
+        w.terminate();
+        w= undefined;  // to reuse the Web Worker
+    } else {
+            alert("Sorry, Your browser dose not support web worker!");
+        }
+
 }

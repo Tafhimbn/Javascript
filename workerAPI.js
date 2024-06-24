@@ -21,7 +21,7 @@ function startWorker() {
      }
       
      // listening for worker events/messages
-     w.onmessage = function (event){
+     w.onmessage = function (event){  // The onmessage event occurs when a message is received through an event source.
         console.log(event.data);
         document.getElementById("worker_data").innerHTML = event.data;
      };

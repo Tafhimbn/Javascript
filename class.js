@@ -3,7 +3,7 @@
 Those objects will have some state (variables) & some behavior (functions) inside it.
 Class is a program-code template for creating objects.
 
-class MyClass {
+class MyClass { 
 
 constructor( ) { ... }
 

@@ -4,7 +4,15 @@
     It uses Request and Resource objects.
     The fetch() method is used to fetch a resource (data).
 
-let promise = fetch(url.[option]) 
+  Syntax:
+
+    window.fetch(url, [option]) 
+    or
+    fetch(url, [option]) 
+
+    where,
+    URL       −> It is an API endpoint where you need to make a request.
+    [options] −> It is an optional parameter. It is an object containing the method, headers, etc., as a key.
 
 */
 

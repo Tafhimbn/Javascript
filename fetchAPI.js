@@ -16,21 +16,48 @@
 
 */
 
-const url="https://cat-fact.herokuapp.com/facts";
 
-let data = fetch(url);
+const display = document.getElementById("fetchapi");
 
-console.log(data);
+function getdata(){
+  fetch("http://localhost:5500/fetch/api.txt")
+     .then(response => response.text())
+     .then((data) => {
+       display.innerText = data;
+  console.log("Fetch API");
+     })
+}
 
-const getFacts = async () => {
+
+
+
+  const display2 = document.getElementById("fetchapi2");
+
+  async function getdata2() {
+     const res = await fetch("http://localhost:5500/fetch/api.txt");
+     const data2 = await res.text();
+     
+     display2.innerText = data2;
+     console.log("Fetch API 2"); 
+    }
+  
+
+
+
+
+/*
+
+const getFacts = async function getdata2() => {
+  const url="http://localhost:5500/fetch/api.txt";
+  const data = await fetch(url);
+  console.log(data);
   console.log("Getting data ......");
-  let response = await fetch(URL);
+  const response = await fetch(URL);
   console.log(response);
   console.log(response);
 };
 
 
-/*
 AJAX
 AJAX = Asynchronous JavaScript And XML.
 

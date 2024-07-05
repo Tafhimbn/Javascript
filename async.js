@@ -70,29 +70,73 @@ getData(1, () => {                       // callback hell
 /*
 Promises:
     => Promise is for “eventual” completion of task. It is an object in JS.
+       It is a solution to callback hell.
 
-     It is a solution to callback hell.
+    let promise = new Promise( (resolve, reject) => { .... } )
 
-    let promise = new Promise( (resolve, reject) => { .... } )    //
-
-  *resolve & reject are callbacks provided by JS
+        *resolve & reject are callbacks provided by JS
 
 
 A JavaScript Promise object can be:
-    Pending : the result is undefined
-    Resolved : the result is a value (fulfilled)          resolve( result )
-    Rejected : the result is an error object             reject( error )
+    Pending  : the result is undefined
+    Resolved/Fulfilled : the result is a value (fulfilled)          resolve( result)
+    Rejected : the result is an error object              reject( error )
 
  *Promise has state (pending, fulfilled) & some result (result for resolve & error for reject).
+ 
+Promise Syntax:
 
-    .then( ) & .catch( )
+    // "Producing Code" (May take some time)
 
-    promise.then( ( res ) => { .... } )                // when promise fullfil
-    promise.catch( ( err ) ) => { .... } )             // when promise rejected
+        let myPromise = new Promise(function(myResolve, myReject) {   
+                myResolve(); // when successful
+                myReject();  // when error
+                });
 
+     then() method 
+             =>  then() method is used with the callback when the promise is successfully fulfilled or resolved.
+                syntax of then() method:
+                                        promiseObject.then(onFulfilled, onRejected);
+    
+    catch() method
+             => catch() method is used with the callback when the promise is rejected or if an error occurs.
+                syntax of catch() method:
+                                        promiseObject.catch(onRejected)
+    
 */
 
+const condition = true;
+
+console.log('Task 1');
+
+
+// promise declaration
+const promise_value = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        if(condition){
+            resolve('Task 2');
+        } else{
+            reject('failed');
+        }
+    },2000);
+});
+
+promise_value
+    .then(function(value){
+        console.log(value);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+console.log('Task 3')
+
+
+
+
+/*
 let promise = new Promise ((resolve, reject) => {
+// const promise = new Promise (function(resolve, reject) {
     console.log("I am promise");
 });
 
@@ -124,7 +168,7 @@ pro1.then((res) => {
     });
 });
 
-
+*/
 
 /*
 

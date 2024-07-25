@@ -22,9 +22,26 @@ AJAX Process:
 6. The response is read by JavaScript
 7. Proper action (like page update) is performed by JavaScript
 
+i. Creating an XMLHttpRequest object:
+
+            xhr_variable = new XMLHttpRequest();
+
+
+ii. Define a Callback Function:
+
+            xhr_variable.onload = function() {
+                                               // What to do when the response is ready
+                }   
+
+iii. Send a Request
+
+            xhr_variable.open("GET", "ajax_data.txt");
+            xhr_variable.send();
 
 
 */
+
+
 
 function loadData(){
     // create a new request 
@@ -32,6 +49,18 @@ function loadData(){
 
 
     // When response arrived
+    xhr.onload = function(){
+        const container = document.getElementById("ajax0");
+        ajax0.innerHTML = xhr.responseText;
 
+    };
     
+
+    // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS
+
+    xhr.open("GET","./data/ajax_data.txt",);
+
+    // send request
+    xhr.send();
+
 }

@@ -1,0 +1,32 @@
+<h1> AJAX </h1>
+
+<div> 
+
+<p> AJAX tutorial covers concepts and examples of AJAX technology for beginners and professionals. </p>
+<p> AJAX is an acronym for Asynchronous JavaScript and XML. It is a group of inter-related technologies like JavaScript, DOM, XML, HTML/XHTML, CSS, XMLHttpRequest etc.</p>
+<p> AJAX allows you to send and receive data asynchronously without reloading the web page. So it is fast. </p>
+<p> AJAX allows you to send only important information to the server not the entire page. So only valuable data from the client side is routed to the server side. It makes your application interactive and faster. </p>
+
+<p> Where it is used? </p>
+<p> There are too many web applications running on the web that are using ajax technology like gmail, facebook,twitter, google map, youtube etc. </p>
+
+<p> AJAX Technologies </p>
+<p> The technologies that are used by AJAX are already implemented in all the Morden browsers. So the client does not require any extra module to run the AJAX application.The technologies used by AJAX are − </p>
+
+<p> Javascript − It is an important part of AJAX. It allows you to create client-side functionality. Or we can say that it is used to create AJAX applications. </p>
+<p> XML − It is used to exchange data between web server and client. </p>
+<p> The XMLHttpRequest − It is used to perform asynchronous data exchange between a web browser and a web server. </p>
+<p> HTML and CSS − It is used to provide markup and style to the webpage text. </p>
+<p> DOM − It is used to interact with and alter the webpage layout and content dynamically. </p>
+
+<p> Steps of AJAX Operation </p>
+<p> A client event occurs. </p>
+<p> An XMLHttpRequest object is created. </p>
+<p> The XMLHttpRequest object is configured. </p>
+<p> The XMLHttpRequest object makes an asynchronous request to the Webserver. </p>
+<p> The Webserver returns the result containing XML document. </p>
+<p> The XMLHttpRequest object calls the callback() function and processes the result. </p>
+<p> The HTML DOM is updated. </p>
+
+</div>
+ 

@@ -46,8 +46,7 @@ function getdata(){
 
 
 /*
-
-const getFacts = async function getdata2() => {
+  const getFacts = async function getdata2() => {
   const url="http://localhost:5500/fetch/api.txt";
   const data = await fetch(url);
   console.log(data);
@@ -57,15 +56,7 @@ const getFacts = async function getdata2() => {
   console.log(response);
 };
 
-
-AJAX
-AJAX = Asynchronous JavaScript And XML.
-
-AJAX is not a programming language.
-AJAX just uses a combination of:
-            A browser built-in XMLHttpRequest object (to request data from a web server)
-            JavaScript and HTML DOM (to display or use the data)
-
 */
 
 
+// Geo-location API 

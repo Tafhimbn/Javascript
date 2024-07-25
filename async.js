@@ -79,8 +79,10 @@ Promises:
 
 A JavaScript Promise object can be:
     Pending  : the result is undefined
-    Resolved/Fulfilled : the result is a value (fulfilled)          resolve( result)
-    Rejected : the result is an error object              reject( error )
+    Resolved/Fulfilled : the result is a value (fulfilled) 
+                           resolve( result)
+    Rejected : the result is an error object              
+                           reject( error )
 
  *Promise has state (pending, fulfilled) & some result (result for resolve & error for reject).
  
@@ -132,6 +134,68 @@ promise_value
 console.log('Task 3')
 
 
+// Solving Callback hell problem using promise 
+
+const paymentSuccess = true;
+const total_marks = 75;
+
+function enroll(){
+    console.log('Course enrollment is in progress......');
+
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            if(paymentSuccess){
+                resolve();
+            } else{
+                console.log('Payment Failed!');
+            }
+        }, 2000);
+    });
+
+    return promise;
+}
+
+function progress(){
+    console.log('Course on progress...');
+
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            if(total_marks >= 80){
+                resolve();
+            } else{
+                reject('You could not get enough marks to get the ');
+            }
+
+        }, 3000);
+    });
+    
+    return promise;
+}
+
+
+function getCertificate(){
+    console.log('Preparing your Certificate...');
+
+    const promise = new Promise(function(resolve){
+        setTimeout(function(){
+            resolve("Congrats! You got the certificate");
+        }, 1000)
+    });
+
+   // const promise = Promise.resolve("Congrats! You got the certificate");  // smaller Syntax 
+    return promise;
+}
+
+enroll()
+     .then(progress)
+     .then(getCertificate)
+     .then(function(value){
+        console.log(value);
+     })
+     .catch(function(err){
+        console.log(err);
+     })
+
 
 
 /*
@@ -163,7 +227,7 @@ pro1.then((res) => {
     console.log(res);
     console.log("fetching data2.....");
     let pro2 = asyncFunc2();
-    pro2.then((res) => {
+    pro2.then((res) => {1996
         console.log(res);
     });
 });
@@ -172,16 +236,73 @@ pro1.then((res) => {
 
 /*
 
-Async-Await:
+Async-Await: (from version 6)
 
     async function always returns a promise.
 
-    async function myFunc( ) { .... }
+    async function myFunction( ) { .... }
 
     await pauses the execution of its surrounding async function until the promise is settled.
 
 */
 
+const balance_available = true;
+const pin = 1234;
+
+
+function Verify(){
+    console.log('Verifying Pin .......');
+
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            if(pin == 1234){
+                resolve();
+            } else{
+                reject('Wrong Pin Number!');
+            }
+
+        }, 3000);
+    });
+    
+    return promise;
+}
+
+function cash_withdraw(){
+    console.log('Balance Checking.......');
+
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            if(balance_available){
+                resolve();
+            } else{
+                console.log('Failed due to insufficient Balance!');
+            }
+        }, 2000);
+    });
+
+    return promise;
+}
+
+
+function getCash(){
+    console.log('Providing your Cash...');
+    const promise = Promise.resolve("Please, Collect Your Cash.");
+    return promise;
+}
+
+
+async function atm(){
+    try {                         // 
+        await Verify();
+        await cash_withdraw();
+        const message = await getCash();
+        console.log(message);
+    } catch(err){                     // Print error message 
+        console.log(err);
+    }
+}
+
+atm();
 
 /*
 IIFE : Immediately Invoked Function Expression

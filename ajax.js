@@ -69,7 +69,7 @@ function loadData1(){
 
 // Multiple callback
 
-function loadData2(callback_function){
+function loadData2(url,callback_function){
     // create a new request 
     const xhr = new XMLHttpRequest();
 
@@ -82,12 +82,15 @@ function loadData2(callback_function){
 
     // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS
 
-    xhr.open("GET","./data/ajax_data.txt",);
+    xhr.open("GET",url);
 
     // send request
     xhr.send();
 
 }
+
+const url1 = "./data/ajax_data1.txt"
+const url2 = "./data/ajax_data2.txt"
 
 function callback1(xhr){
     const container = document.getElementById("ajax1");
@@ -96,6 +99,6 @@ function callback1(xhr){
 
 function callback2(xhr){
     const container = document.getElementById("ajax1");
-    ajax2.innerHTML = xhr.responseText;
+    ajax1.innerHTML = xhr.responseText;
   }
 

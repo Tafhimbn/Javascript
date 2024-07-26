@@ -1,0 +1,12 @@
+<h1> AJAX Content 1</h1>
+
+<div> 
+
+<p> AJAX tutorial covers concepts and examples of AJAX technology for beginners and professionals. </p>
+<p> AJAX is an acronym for Asynchronous JavaScript and XML. It is a group of inter-related technologies like JavaScript, DOM, XML, HTML/XHTML, CSS, XMLHttpRequest etc.</p>
+<p> AJAX allows you to send and receive data asynchronously without reloading the web page. So it is fast. </p>
+<p> AJAX allows you to send only important information to the server not the entire page. So only valuable data from the client side is routed to the server side. It makes your application interactive and faster. </p>
+
+
+</div>
+ 

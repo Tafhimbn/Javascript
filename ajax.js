@@ -51,9 +51,10 @@ function loadData(){
     // When response arrived
     xhr.onload = function(){
         const container = document.getElementById("ajax0");
-        ajax0.innerHTML = xhr.responseText;
+        container.innerHTML = xhr.responseText;
+    // ajax0.innerHTML = this.responseText;
 
-    };
+    };  
     
 
     // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS

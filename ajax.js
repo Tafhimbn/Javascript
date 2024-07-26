@@ -43,7 +43,7 @@ iii. Send a Request
 
 
 
-function loadData(){
+function loadData1(){
     // create a new request 
     const xhr = new XMLHttpRequest();
 
@@ -52,7 +52,7 @@ function loadData(){
     xhr.onload = function(){
         const container = document.getElementById("ajax0");
         container.innerHTML = xhr.responseText;
-    // ajax0.innerHTML = this.responseText;
+      // container.innerHTML = this.responseText;
 
     };  
     
@@ -65,3 +65,37 @@ function loadData(){
     xhr.send();
 
 }
+
+
+// Multiple callback
+
+function loadData2(callback_function){
+    // create a new request 
+    const xhr = new XMLHttpRequest();
+
+
+    // When response arrived
+    xhr.onload = function(){
+        callback_function(this);
+    }
+    
+
+    // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS
+
+    xhr.open("GET","./data/ajax_data.txt",);
+
+    // send request
+    xhr.send();
+
+}
+
+function callback1(xhr){
+    const container = document.getElementById("ajax1");
+    ajax1.innerHTML = xhr.responseText;
+  }
+
+function callback2(xhr){
+    const container = document.getElementById("ajax1");
+    ajax2.innerHTML = xhr.responseText;
+  }
+

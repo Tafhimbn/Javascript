@@ -111,3 +111,60 @@ function callback2(xhr){
     ajax1.innerHTML = xhr.responseText;
   }
 
+
+
+  function loadData2(url,callback_function){
+    // create a new request 
+      const xhr = new XMLHttpRequest();
+  
+  
+    // When response arrived
+      xhr.onload = function(){
+          callback_function(this);
+      }
+      
+  
+    // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS
+  
+      xhr.open("GET",url);   
+      /*.open(method,url,async)
+                                    method: the type of request: GET or POST
+                                       url: the server (file) location
+                                    async: true (asynchronous) or false (synchronous)
+      */
+      //xhr.open("GET",url + Math.random());  // To avoid cached result, add a unique ID to the URL
+    
+      // send request
+      xhr.send();
+      /* 
+        send()	Sends the request to the server (used for GET)
+        send(string)	Sends the request to the server (used for POST)
+      */
+  }
+
+
+
+function loadData3(){
+  // create a new request 
+  const xhr = new XMLHttpRequest();
+
+
+  // When response arrived
+  xhr.onload = function(){
+      const container = document.getElementById("ajax2");
+      container.innerHTML = xhr.responseText;
+    // container.innerHTML = this.responseText;
+     
+     console.log(this.getAllResponseHeaders());
+
+  };  
+  
+
+  // prepare request - methods: GET, POST, PUT, PATCH DELETE, OPTIONS
+
+  xhr.open("GET","./data/ajax_data.txt",);
+
+  // send request
+  xhr.send();
+
+}

@@ -155,7 +155,9 @@ function loadData3(){
       container.innerHTML = xhr.responseText;
       container.innerHTML = this.responseText;
      
-     console.log(this.getAllResponseHeaders());
+     //console.log(this.getAllResponseHeaders());
+     console.log(this.getResponseHeader("etag"));
+     
 
   };  
   

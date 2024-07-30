@@ -153,7 +153,7 @@ function loadData3(){
   xhr.onload = function(){
       const container = document.getElementById("ajax2");
       container.innerHTML = xhr.responseText;
-    // container.innerHTML = this.responseText;
+      container.innerHTML = this.responseText;
      
      console.log(this.getAllResponseHeaders());
 

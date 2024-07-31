@@ -6,21 +6,22 @@
     Used when data is sent from a server to web page.
    
     JSON is a lightweight data interchange format
-    JSON is language independent *
-    JSON is "self-describing" and easy to understand
-
-    * The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+    JSON is language independent (The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. 
+                                    Code for reading and generating JSON data can be written in any programming language.)
+    
+    
+    JSON is "self-describing" and easy to understand 
 
     The file type for JSON files is ".json"
     The MIME type for JSON text is "application/json"
 
     JSON Syntax Rules:
-        Data is in name/value pairs
-        Data is separated by commas
-        Curly braces hold objects
-        Square brackets hold arrays
+                        Data is in name/value pairs
+                        Data is separated by commas
+                        Curly braces hold objects
+                        Square brackets hold arrays
     
-    '{"name":"John", "age":30, "car":null}'
+      Example:     '{"name":"John", "age":30, "car":null}'
 
     In JSON, keys must be strings, written with double quotes:
     JSON

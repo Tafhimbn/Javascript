@@ -77,5 +77,68 @@ const persons = {
 };
 
 
+// JSON.parse()
+
+const jsonString = '{"name":"Tafhim", "age":25, "city":"Chittagong", "Developer":true}';
+console.log(jsonString);
+
+// convert to valid JS object
+const json2obj = JSON.parse(jsonString);
+console.log(json2obj);
 
 
+const brand = '["Ford", "BMW", "Audi", "Flat"]';
+console.log(brand);
+
+// convert to valid JS Array
+const brandArray = JSON.parse(brand);
+console.log(brandArray);
+
+
+// JSON String to  Date
+
+const profileJson = '{"name":"Tafhim", "birth":"1998-11-04", "city":"Chittagong"}';
+const profileObj = JSON.parse(profileJson);
+profileObj.birth = new Date(profileObj.birth);
+
+console.log(profileObj);
+
+
+// JSON.stringify()
+
+const myObject = {name:"Tafhim", age:25, city:"Chittagong", Developer:true};
+console.log(myObject);
+
+// convert JS String to JSON String
+const json_String = JSON.stringify(myObject);
+console.log(json_String);
+
+
+const brand_Array = ["Ford", "BMW", "Audi", "Flat"];
+console.log(brand_Array);
+
+// convert JS Array to JSON String
+const my_array = JSON.stringify(brand_Array);
+console.log(my_array);
+
+
+
+// Storing data:
+localStorage.setItem("storeJSON", my_array);
+
+// Retrieving data:
+let text = localStorage.getItem("storeJSON");
+let json_2_obj = JSON.parse(text);
+console.log(json_2_obj);
+console.log(json_2_obj.name);
+
+// Stringify Date
+
+const date_JSON = JSON.stringify(profileObj); // from "JSON String to  Date" section
+console.log(date_JSON);
+
+// Stringify Functions
+const info_obj = {name: "Karim", age: function () {return 30;}, city: "Dhaka"};
+info_obj.age = info_obj.age.toString();
+const myJSON = JSON.stringify(info_obj);
+console.log(myJSON);

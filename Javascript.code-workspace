@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../python"
+		},
+		{
+			"path": "../Bootstrap"
+		},
+		{
+			"path": "../css"
+		},
+		{
+			"path": "../html"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Javascript"
+	}
+}

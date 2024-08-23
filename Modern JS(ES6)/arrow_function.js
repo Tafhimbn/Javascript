@@ -36,3 +36,17 @@ let r_area = (l,w) => l*w;
 console.log(r_area(10,10)+" sq. m");
 
 
+var javascript ={
+    name: 'Javascript',
+    libraries: ['React','Angular','Vue'],
+    printLibraries: function () {
+        this.libraries.forEach((a) => console.log(`${this.name} developer uses ${a} as a Library`));
+        /*
+        this.libraries.forEach(function(a) {           // forEach callback function converts "this"  global to local object; so that Javascript will not found
+            console.log(`${this.name} developer uses ${a} as a Library`);
+        })
+        */
+    }
+};
+
+javascript.printLibraries();

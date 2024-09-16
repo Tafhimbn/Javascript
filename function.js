@@ -182,26 +182,6 @@ counter(5); // call or invoke function
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 
 Some common JavaScript library functions are:

@@ -59,3 +59,38 @@ for (let i of set4){
 }
 
 
+// JavaScript WeakSet
+/*
+WeakSet is used to store a collection of objects. The major difference of a WeakSet with a set is that a WeakSet is a collection of objects and not values of some particular type. 
+Syntax:  new WeakSet(object)
+
+*/
+
+const ws = new WeakSet([{a:4,}]);
+console.log(ws);
+
+ws.add({b:1, c:2,}); // only add object
+
+console.log(ws);
+
+
+
+// WeakSet Methods
+
+const ws0 = new WeakSet();
+console.log(ws0); // WeakSet {}
+
+const obj = {a:1};
+
+// add to a weakSet
+ws0.add(obj);
+console.log(ws0); // WeakSet {{a: 1}}
+
+// check if an element is in Set
+console.log(ws0.has(obj)); // true
+
+// delete elements
+ws0.delete(obj);
+console.log(ws0); // WeakSet {}
+
+
